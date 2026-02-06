@@ -1,7 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './globals.css'
 
@@ -65,10 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased">
-        {children}
-        <SpeedInsights />
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }
